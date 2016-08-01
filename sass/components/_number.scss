@@ -1,0 +1,33 @@
+.c-number {
+	@include anim;
+	position: absolute;
+	top: 400px;
+	left: -170px;
+	z-index: 5;
+	font-size: em(345);
+	color: $gray;
+	
+	&--01 {
+		font-size: em(360);
+	}
+	
+	&.active {
+		top: 30px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		top: -320px;
+		
+		&.active {
+			top: -220px;
+		}
+		
+		&--01 {
+			top: 140px;
+			
+			&.active {
+				top: -40px;
+			}
+		}
+	}
+}

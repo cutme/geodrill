@@ -1,0 +1,67 @@
+body {
+	line-height: 1.55;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $regular;
+	}
+	color: $black;
+}
+
+a {
+	@include hover;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+h2, h3 {
+	line-height: 1.1;
+}
+
+h2 {
+	font-size: em(72);
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		font-size: em(52);
+	}
+}
+
+h3 {
+	font: {
+		size: em(35);
+		weight: $bold;
+	}
+}
+
+h4 {
+	font-size: em(28);
+	
+	@media screen and ( max-width: $tablet+px ) {
+		font-size: em(20);
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		font-size: em(22);
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		font-size: em(16);
+	}
+}
+
+h5 {
+	font-size: em(17);
+}
+
+h6 {
+	font-size: em(14);
+}
+
+strong {
+	font-weight: $bold;
+}
+
+u {
+	text-decoration: underline;
+}

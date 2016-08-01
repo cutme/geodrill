@@ -1,0 +1,40 @@
+.c-social {
+	position: absolute;
+	right: 53px; top: 130px;
+	z-index: 5;
+	
+	a {
+		font-size: 22px;
+		
+		&:hover {
+			color: $red;
+		}
+	}
+	
+	li {
+		margin-bottom: 50px;
+		
+		&:first-child {
+			position: relative;
+			
+			&:after {
+				position: absolute;
+				left: 50%;
+				top: 38px;
+				display: block;
+				width: 1px;
+				height: 20px;
+				background-color: black;
+				content: ' ';
+			}
+		}
+	}
+	
+	@media screen and ( max-width: $tablet+px ) {
+		right: 30px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		display: none;
+	}
+}

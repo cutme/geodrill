@@ -1,0 +1,122 @@
+.o-edge {
+
+
+	&:after,
+	&:before {
+		@include anim;
+		position: absolute;
+		display: block;
+		background-color: black;
+		content: ' ';
+	}
+	
+	&:before {
+		top: 0;
+		width: 1px;
+		height: 100%;
+	}
+	
+	&:after {
+		display: none;
+		width: 50%;
+		height: 1px;
+	}
+	
+	&--bottom {
+		padding-bottom: 60px;
+
+		&:after {
+			display: block;
+			bottom: 0;
+		}
+		
+		&.o-edge--right {
+			&:after {
+				right: 0;
+			}
+		}
+	}
+	
+	&--fat {
+		&:before {
+			width: 10px;
+		}
+	}
+	
+	&--left {
+		padding-left: 50px;
+
+		&:before {
+			left: 0;
+		}
+		
+		&.inactive {
+			&:before {	
+				@include opacity(0);
+				@include transform(rotate(-15deg));
+				left: -100px;
+			}
+		}
+		
+		&.active {
+			&:before {			
+				@include opacity(1);
+				@include transform(rotate(0));
+				left: 0;
+			}
+		}
+	}
+	
+	&--red {
+		&:before {
+			background-color: $red;
+		}
+	}
+	
+	&--right {
+		&:before {
+			right: 0;
+		}
+	}
+	
+	@media screen and ( max-width: $tablet+px ) {
+		&--right {
+			&:before {
+				display: none;
+			}
+		}
+		
+		&--bottom {
+			&:after {
+				display: none;
+			}
+		}
+		
+		.c-intro & {
+			padding-left: 105px;
+			
+			&:before {
+				height: 105px;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		.c-intro & {
+			padding-left: 50px;
+		}
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		
+		&--left {
+			padding-left: 25px;
+		}
+		
+		.c-intro & {
+			padding-left: 25px;
+		}
+		
+		
+	}
+}

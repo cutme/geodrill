@@ -1,0 +1,61 @@
+.o-link {	
+	
+	display: inline-block;
+	border-bottom: 1px solid transparent;
+
+	&--pdf {
+		margin-right: 60px;
+
+		&:after {
+			position: absolute;
+			right: -60px;
+			top: -22px;
+			font: {
+				size: 42px;
+				family: 'icomoon';
+			}
+			content: "\e905";
+			color: $red;
+		}
+		
+		
+	}
+
+	&--small {
+		font-size: 14px;
+	}
+	
+	&--underline {
+		border-bottom: 1px solid $red;
+	}
+	
+	&:hover {
+		border-bottom-color: $red;
+		color: $red;
+	}
+
+	.c-block & {
+		margin-left: 10px;
+	}
+	
+	@media screen and ( min-width: $smartphone+1+px ) {
+		position: relative;
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		.c-block & {
+			margin-left: 0;
+		}
+		
+		&--container {
+			display: block;
+			position: relative;
+		}
+		
+		&--pdf {
+			&:after {
+				right: 0;
+			}
+		}
+	}
+}

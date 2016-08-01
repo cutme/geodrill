@@ -1,0 +1,12 @@
+.c-signature {
+	position: relative;
+	padding-right: 200px;
+	text-align: right;
+	
+	i {
+		position: absolute;
+		right: 0; top: -15px;
+		font-size: em(94);
+		color: $red;
+	}
+}

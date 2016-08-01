@@ -1,0 +1,93 @@
+.o-header {
+
+	&--serif {
+		font-family: $abril;
+	}
+	
+	.c-block & {
+		margin-bottom: 50px;
+	}
+	
+	.c-intro & {
+		@include transform(rotate(-90deg));
+		@include transform-origin(right, bottom);
+		position: absolute;
+		right: 140px;
+		top: 70px;
+		z-index: 5;
+		width: 620px;
+		text-transform: uppercase;
+		font-size: em(122);
+		line-height: .9;
+
+		span {
+			@include transform(rotate(90deg));
+			position: absolute;
+			left: -174px;
+		    bottom: 35px;
+			display: block;
+			width: 344px; height: 101px;
+			background: {
+				image: url(../img/zobowiazuje.svg);
+				repeat: no-repeat;
+			}
+			overflow: hidden;
+			text-indent: -10000px;
+		}
+		
+		@media screen and ( max-width: $tablet+px ) {
+			top: -140px;
+			right: 90px;
+			
+			span {
+				left: -128px;
+				bottom: 10px;
+				width: 210px;
+			}
+		}
+		
+		@media screen and ( min-width: $tablet_portrait+1+px ) and ( max-width: $tablet+px ) {
+			font-size: em(90);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait+px ) {
+			top: 20px;
+		}
+		
+		@media screen and ( max-width: $smartphone+px ) {
+			top: 0;
+			right: 60px;
+			width: 320px;
+			font-size: em(64);
+			
+			span {
+				left: -100px;
+				bottom: 0;
+				width: 140px;
+			}
+		}
+	}
+	
+	&.u-buffer {
+		margin-bottom: 100px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		&--content {
+			.c-block & {
+				margin-bottom: 220px !important;
+				position: relative;
+				padding-left: 50px;
+
+				&:before {
+					position: absolute;
+					left: 0; bottom: 0;
+					width: 10px; height: 105px;
+					background-color: $red;
+					display: block;
+					content: ' ';
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.c-intro {
+	position: relative;
+	padding: 670px 0 250px 0;
+	
+	@media screen and ( min-width: $tablet_portrait+1+px ) and ( max-width: $tablet+px ) {
+		padding: 470px 0 250px 0;
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		padding: 470px 0 250px 0;
+	}
+}

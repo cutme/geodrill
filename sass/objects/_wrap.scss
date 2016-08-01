@@ -1,0 +1,27 @@
+.o-wrap {
+	@include clear;
+	//position: relative; z-index: 5;
+	max-width: $grid-base-width + px;
+	margin: 0 auto;
+	
+	@media screen and ( max-width: $grid-base-width+px ) {
+		padding: {
+			left: 30px;
+			right: 30px;
+		}
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		padding: {
+			left: 15px;
+			right: 15px;
+		}
+	}
+}

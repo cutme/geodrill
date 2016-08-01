@@ -1,0 +1,88 @@
+.c-bullet {
+	@include anim;
+	position: absolute;
+	font-size: em(15);
+	
+	.o-content & {
+		left: -135px;
+	}
+
+	&--bottom {
+		bottom: -30px;		
+	}
+	
+	.o-content & {
+		&--middle {
+			position: relative;
+			top: -24px;
+			left: -37px;
+		}
+	}
+	
+	&--middle2 {
+		top: 70%;
+	}
+	
+	&--middle3 {
+		top: 70%;
+	}
+	
+	&--top {
+		top: 16px;
+	}
+	
+	.c-pendant & {
+		position: absolute;
+		right: -50px;
+		top: 68px;
+		width: 51px;
+		overflow: hidden;
+	}
+
+	@media screen and ( max-width: $tablet+px ) {
+	
+		.o-content & {
+			left: -100px;
+			
+			&--middle {
+				left: -36px;
+			}
+		}
+	
+		.c-pendant & {
+			top: 22px;
+		}
+		
+		&--middle2 {
+			top: auto;
+			bottom: 0;
+		}
+		
+		&--middle3 {
+			top: auto;
+			bottom: 0;
+		}
+			
+		&--top {
+			top: auto;
+			bottom: 0;
+		}
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+	
+		.o-content & {
+			left: 0;
+		}
+		
+		&--middle2 {
+			bottom: -240px;
+		}
+		
+		&--middle3 {
+			top: auto;
+			bottom: -100px;
+		}
+	
+	}
+}

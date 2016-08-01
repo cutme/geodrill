@@ -1,0 +1,68 @@
+[class^="icon-"], [class*=" icon-"] {
+	@include icomoon;
+}
+
+.u-align-center {
+	text-align: center;
+} 
+
+.u-align--right {
+	text-align: right;
+}
+
+.u-buffer--minus {
+	@media screen and ( min-width: $tablet_portrait+1+px ) {
+		margin-left: -50px;
+	}
+}
+
+.u-posy {
+	@include scut-center-transform(y);
+}
+
+.u-rotate90 {
+	@include transform(rotate(90deg));
+}
+
+.u-fs--20 {
+	font-size: em(20);
+}
+
+.u-rotate-90 {
+	@include transform(rotate(-90deg));
+}
+
+.u-text--red {
+	color: $red;
+}
+
+.u-uppercase {
+	text-transform: uppercase;
+}
+
+.safari {
+	* {
+		-webkit-backface-visibility: hidden;
+		-webkit-transform-style: preserve-3d;
+	}
+}
+
+.is-visible {
+	@include hover;
+	@include opacity(1);
+}
+
+@media screen and ( min-width: $smartphone+1+px ) {
+	#galeria {
+		height: 960px;
+	}
+	
+	.owl-carousel {
+		display: block !important;
+	}
+}
+
+
+.no-scroll {
+	overflow: hidden;
+}

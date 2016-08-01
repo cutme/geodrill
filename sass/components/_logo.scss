@@ -1,0 +1,25 @@
+.c-logo {
+	position: absolute;
+	left: 55px; top: 10px;
+	z-index: 1;
+	font: {
+		family: $icomoon;
+		size: em(84);
+	}
+	
+	&:before {
+		content: "\e900";
+	}
+	
+	@media screen and ( max-width: $grid-base-width+px ) {
+		left: 30px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		left: 20px;
+		
+		&:before {
+			content: "\e901";
+		}
+	}
+}

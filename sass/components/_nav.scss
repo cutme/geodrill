@@ -1,0 +1,29 @@
+.c-nav {
+	position: absolute;
+	top: 40px;
+	right: 250px;
+	z-index: 5;
+
+	li {
+		float: left;
+		padding: 15px;
+	}
+
+	a {
+		text-transform: uppercase;
+		font: {
+			family: $oswald;
+			size: em(14);
+		}
+
+		&:hover {
+			color: $red;
+		}
+	}
+
+	@media screen and ( max-width: $tablet+px ) {
+		
+		display: none;
+		
+	}
+}

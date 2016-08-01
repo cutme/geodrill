@@ -1,0 +1,39 @@
+.c-extras {
+	position: absolute;
+	right: grid(210, 860);
+	top: -140px;
+	
+	.c-bullet {
+		position: relative;
+		left: -100px;
+		margin-right: 255px;
+	}
+	
+	&.active {
+		.c-bullet {
+			left: 100px;
+		}		
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		right: auto;
+		left: 70px;
+		
+		.c-bullet {
+			display: block;
+			margin: 0 0 20px 0;
+		}
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		left: 15px;
+		
+		.c-bullet {
+			margin: 0 0 10px 0;
+		}
+	}
+}
+
+.fixed {
+	position: fixed;
+}

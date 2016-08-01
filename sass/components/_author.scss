@@ -1,0 +1,31 @@
+.c-author {
+	@include anim;
+	position: relative;
+	right: -100px;
+	text-transform: uppercase;
+	font: {
+		family: $oswald;
+		size: em(14);
+	}
+	color: $red--darker;
+	
+	.o-link {
+		margin-left: 10px;
+		letter-spacing: 2px;
+	}
+	
+	.active & {
+		right: 100px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		display: block;
+	}
+	
+	@media screen and ( max-width: $smartphone_small+px ) {
+		.o-link {
+			display: block;
+			margin: 0;
+		}
+	}	
+}
