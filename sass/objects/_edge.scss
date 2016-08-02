@@ -1,6 +1,5 @@
 .o-edge {
 
-
 	&:after,
 	&:before {
 		@include anim;
@@ -53,7 +52,6 @@
 		&.inactive {
 			&:before {	
 				@include opacity(0);
-				@include transform(rotate(-15deg));
 				left: -100px;
 			}
 		}
@@ -61,7 +59,6 @@
 		&.active {
 			&:before {			
 				@include opacity(1);
-				@include transform(rotate(0));
 				left: 0;
 			}
 		}
@@ -74,8 +71,24 @@
 	}
 	
 	&--right {
+		padding-right: 50px;
+
 		&:before {
 			right: 0;
+		}
+		
+		&.inactive {
+			&:before {
+				@include opacity(0);
+				right: -100px;
+			}
+		}
+		
+		&.active {
+			&:before {			
+				@include opacity(1);
+				right: 0;
+			}
 		}
 	}
 	

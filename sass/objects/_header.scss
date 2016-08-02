@@ -1,11 +1,12 @@
 .o-header {
+	position: relative;
 
 	&--serif {
 		font-family: $abril;
 	}
 	
 	.c-block & {
-		margin-bottom: 50px;
+		
 	}
 	
 	.c-intro & {
@@ -68,9 +69,9 @@
 		}
 	}
 	
-	&.u-buffer {
-		margin-bottom: 100px;
-	}
+	//&.u-buffer {
+		//margin-bottom: 100px;
+	//}
 	
 	@media screen and ( max-width: $tablet_portrait+px ) {
 		&--content {

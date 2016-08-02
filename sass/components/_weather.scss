@@ -1,0 +1,56 @@
+.c-weather {
+	@include hover;
+	margin-bottom: 40px;
+	
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		font-family: $oswald;
+		
+		&:nth-child(2) {
+			padding: 0 15px;
+		}
+	}
+	
+	&__icon {
+		display: block;
+
+		&--white {
+			display: none;
+		}
+	}
+	
+	&.is-white {
+		.c-weather__icon {
+			&--black {
+				display: none;
+			}
+			
+			&--white {
+				display: block;
+			}
+		}
+	}
+	
+	@media screen and ( min-width: $smartphone+1+px ) {
+		position: absolute;
+		right: 40px; top: 40px;
+		z-index: 5;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		right: 20px;
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		&__icon {
+			&--black {
+				display: none;
+			}
+			
+			&--white {
+				display: block;
+			}
+		}
+	}
+}

@@ -5,13 +5,15 @@
 	
 	.c-bullet {
 		position: relative;
-		left: -100px;
-		margin-right: 255px;
+		left: auto;
+		margin-right: 55px;
+		//left: -100px;
+		//margin-right: 255px;
 	}
 	
 	&.active {
 		.c-bullet {
-			left: 100px;
+			left: 0 auto;
 		}		
 	}
 	

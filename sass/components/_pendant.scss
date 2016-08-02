@@ -47,6 +47,14 @@
 		}
 	}
 	
+	&--border-short {
+		&:before {
+			left: auto;
+			right: -5px;
+			width: 55px;
+		}
+	}
+	
 	h6 {
 		padding-top: 8px;
 		letter-spacing: 1px;

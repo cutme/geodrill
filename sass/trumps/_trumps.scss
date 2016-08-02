@@ -2,12 +2,29 @@
 	@include icomoon;
 }
 
+.is-visible {
+	@include hover;
+	@include opacity(1);
+}
+
+.is-white {
+	color: white;
+}
+	
 .u-align-center {
 	text-align: center;
 } 
 
 .u-align--right {
 	text-align: right;
+}
+
+.u-buffer {
+	margin-bottom: 100px;
+}
+
+.u-buffer--half {
+	margin-bottom: 50px;
 }
 
 .u-buffer--minus {
@@ -47,12 +64,9 @@
 	}
 }
 
-.is-visible {
-	@include hover;
-	@include opacity(1);
-}
 
-@media screen and ( min-width: $smartphone+1+px ) {
+
+@media screen and ( min-width: $tablet_portrait+1+px ) {
 	#galeria {
 		height: 960px;
 	}
@@ -61,6 +75,14 @@
 		display: block !important;
 	}
 }
+/*
+
+@media screen and ( max-width: $tablet_portrait+px ) {
+	#galeria {
+		margin-bottom: 0;
+	}
+}
+*/
 
 
 .no-scroll {

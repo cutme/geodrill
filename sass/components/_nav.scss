@@ -1,15 +1,12 @@
 .c-nav {
-	position: absolute;
-	top: 40px;
-	right: 250px;
+	
 	z-index: 5;
 
-	li {
-		float: left;
+	&__item {
 		padding: 15px;
 	}
 
-	a {
+	&__link {
 		text-transform: uppercase;
 		font: {
 			family: $oswald;
@@ -21,9 +18,49 @@
 		}
 	}
 
+	@media screen and ( min-width: $tablet+1+px ) {
+		position: absolute;
+		top: 40px;
+		right: 250px;
+		
+		li {
+			float: left;
+		}
+	}
+
 	@media screen and ( max-width: $tablet+px ) {
+		@include anim;
+		@include opacity(0);	
+		position: fixed;
+		left: -100%;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $red;
+		text-align: center;
+		color: white;
 		
-		display: none;
+		&__item {
+			padding: 10px;
+		}
 		
+		&__content {
+			@include scut-center-transform;
+		}
+		
+		
+		&__link {
+			font-size: em(18);
+			
+			&:hover {
+				color: $black;
+			}
+		}
+		
+		&.is-active {
+			//display: block;
+			left: 0;
+			@include opacity(1);
+		}
 	}
 }

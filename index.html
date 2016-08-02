@@ -12,7 +12,9 @@
 
 <body class="no-scroll">
 
-<div class="c-preloader"></div>
+<div class="c-preloader">
+	<div class="c-preloader__item"></div>
+</div>
 
 <div class="o-container is-hidden">
 	<div class="c-topbar">
@@ -29,27 +31,49 @@
 				</li>
 			</ul>
 			
-			<nav class="c-nav">
-				<ul>
-					<li>
-						<a href="#o-firmie">o firmie</a>
-					</li>
-					
-					<li>
-						<a href="#uslugi">usługi</a>
-					</li>
-					
-					<li>
-						<a href="#cennik">cennik</a>
-					</li>
-
-					<li>
-						<a href="#kontakt">kontakt</a>
-					</li>
-				</ul>
+			<nav class="c-nav">				
+				<div class="c-nav__content">
+					<ul class="c-nav__list">
+						<li class="c-nav__item">
+							<a href="#o-firmie" class="c-nav__link">o firmie</a>
+						</li>
+						
+						<li class="c-nav__item">
+							<a href="#uslugi" class="c-nav__link">usługi</a>
+						</li>
+	
+						<li class="c-nav__item">
+							<a href="#cennik" class="c-nav__link">cennik</a>
+						</li>
+	
+						<li class="c-nav__item">
+							<a href="#kontakt" class="c-nav__link">kontakt</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 			
-			<a class="c-nav-trigger icon-menu js-trigger"></a>
+			<a class="c-nav-trigger js-trigger">
+				<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-18 0 72 36" enable-background="new -18 0 72 36" xml:space="preserve">
+					
+					<g class="svg-menu-toggle">
+						<rect x="-18" y="0" width="71.9" height="1.7" class="bar" />
+						<rect x="-18" y="17.1" width="71.9" height="1.7" class="bar" />
+						<rect x="-18" y="34.2" width="71.9" height="1.7" class="bar" />
+					</g>
+
+				</svg>
+			</a>
+			
+			<ul id="weather-summary" class="c-weather js-weather">
+                <li id="weather-time"></li>
+                <li>
+                	<img class="c-weather__icon c-weather__icon--black" />
+	                <img class="c-weather__icon c-weather__icon--white" />
+                </li>
+                <li id="weather-temperature"></li>
+            </ul>
 		</div>
 	</div>
 	
@@ -87,12 +111,13 @@
 					</span>
 				</a>
 				
-				<i class="c-bullet icon-bullet u-rotate90"></i>
+				<i class="c-bullet c-bullet--link icon-bullet u-rotate90"></i>
 			</div>
 			
 			<div class="o-content">
-				<div class="o-header o-header--serif">
+				<div class="o-header o-header--serif u-buffer">
 					<h2>O firmie</h2>
+					<i class="c-bullet c-bullet--middle icon-bullet"></i>
 				</div>				
 
 				<div class="o-content__article">
@@ -104,8 +129,6 @@
 					
 					<p class="c-signature">Zapraszam do współpracy <i class="icon-signature"></i></p>
 				</div>
-				
-				<i class="c-bullet c-bullet--bottom icon-bullet"></i>
 			</div>
 		</div>
 
@@ -119,8 +142,9 @@
 			</div>
 			
 			<div class="o-content">
-				<div class="o-header o-header--serif o-header--content">
+				<div class="o-header o-header--serif o-header--content u-buffer">
 					<h2>Usługi</h2>
+					<i class="c-bullet c-bullet--middle icon-bullet"></i>
 				</div>				
 
 				<div class="o-content__article">
@@ -161,8 +185,6 @@
 						</li>
 					</ul>
 				</div>
-				
-				<i class="c-bullet c-bullet--bottom icon-bullet"></i>
 			</div>
 		</div>
 		
@@ -174,8 +196,9 @@
 			</div>
 			
 			<div class="o-content">
-				<div class="o-header o-header--serif o-header--content">
+				<div class="o-header o-header--serif o-header--content u-buffer">
 					<h2>Studnie<br /> głębinowe</h2>
+					<i class="c-bullet c-bullet--middle icon-bullet"></i>
 				</div>	
 				
 				<div class="o-content__article">			
@@ -191,7 +214,7 @@
 					</p>
 				</div>
 				
-				<i class="c-bullet icon-bullet"></i>
+				
 			</div>
 		</div>		
 		
@@ -203,24 +226,25 @@
 			</div>
 			
 			<div class="o-content">
-				<div class="o-header o-header--serif u-buffer o-header--content">
+				<div class="o-header o-header--serif o-header--content u-buffer">
 					<h2>Pompy ciepła</h2>
+					
+					<i class="c-bullet c-bullet--middle icon-bullet"></i>
 				</div>				
 
-				<div class="o-content__article o-edge o-edge--right o-edge--bottom">
+				<div class="o-content__article">
 					<p>Pompy ciepła są urządzeniami praktycznie bezobsługowymi, gdyż nie wymagają transportu i magazynowania paliwa tak jak w przypadku kotłów olejowych czy gazowych. Obsługa ogranicza się do ustawienia żądanych temperatur w pomieszczeniu i wody użytkowej, które łatwo można zmieniać. Poza tym cyfrowy wyświetlacz powiadamia w łatwy do zrozumienia sposób jakie operacje wykonuje urządzenie i pozwala sprawdzić ustawienia.</p>
 	
-					<p class="u-align--right u-uppercase">Pompa posiada możliwość podłączenia modułu, który pozwala na to aby zaprogramowane wcześniej ustawienia można było uruchomić zdalnie. np. z internetu.</p>
+					<p class="o-edge o-edge--right  u-align--right u-uppercase inactive">Pompa posiada możliwość podłączenia modułu, który pozwala na to aby zaprogramowane wcześniej ustawienia można było uruchomić zdalnie. np. z internetu.</p>
 					
 					<p>W załączniku rónież kilka słów o RÓŻDŻKARSTWIE I RADIESTEZJI.</p>
-					
 					
 					<p class="u-align--right">
 						<a href="#" class="o-link o-link--pdf o-link--underline">Czytaj więcej PDF</a>
 					</p>
 				</div>
 				
-				<i class="c-bullet c-bullet--top icon-bullet"></i>
+				
 			</div>
 		</div>
 
@@ -234,7 +258,7 @@
 			</div>
 			
 			<div class="o-content">
-				<div class="o-header o-header--serif u-buffer o-header--content">
+				<div class="o-header o-header--serif o-header--content u-buffer">
 					<h2>Cennik</h2>
 				</div>				
 
@@ -252,7 +276,7 @@
 						</ul>
 					</div>
 					
-					<i class="c-bullet c-bullet--middle icon-bullet"></i>
+					<i class="c-bullet c-bullet--between icon-bullet"></i>
 					
 					<div class="o-content__article o-edge o-edge--left inactive">
 						<div class="o-header">
@@ -280,35 +304,35 @@
 			</div>
 			
 			<div class="o-content">
-				<div class="o-header o-header--serif u-buffer o-header--content">
+				<div class="o-header o-header--serif o-header--content u-buffer">
 					<h2>Galeria</h2>
 					
-					<i class="c-bullet c-bullet--middle2 icon-bullet"></i>
+					<i class="c-bullet c-bullet--middle icon-bullet"></i>
 				</div>
 			</div>
 			
 			<div class="o-content o-content--wide js-gallery">
 
-				<div class="c-gallery owl-carousel">
-					<div class="c-gallery__item c-gallery__item--01">
+				<div class="c-gallery owl-carousel inactive">
+					<a href="img/gallery/01-big.jpg" class="c-gallery__item c-gallery__item--01 mfp-image">
 						<img src="img/gallery/01.jpg" alt="" />
-					</div>
+					</a>
 					
-					<div class="c-gallery__item c-gallery__item--02">
+					<a href="img/gallery/02-big.jpg" class="c-gallery__item c-gallery__item--02 mfp-image">
 						<img src="img/gallery/02.jpg" alt="" />
-					</div>
+					</a>
 					
-					<div class="c-gallery__item c-gallery__item--03">
+					<a href="img/gallery/03-big.jpg" class="c-gallery__item c-gallery__item--03 mfp-image">
 						<img src="img/gallery/03.jpg" alt="" />
-					</div>
+					</a>
 					
-					<div class="c-gallery__item c-gallery__item--04">
+					<a href="img/gallery/04-big.jpg" class="c-gallery__item c-gallery__item--04 mfp-image">
 						<img src="img/gallery/04.jpg" alt="" />
-					</div>
+					</a>
 					
-					<div class="c-gallery__item c-gallery__item--05">
+					<a href="img/gallery/05-big.jpg" class="c-gallery__item c-gallery__item--05 mfp-image">
 						<img src="img/gallery/05.jpg" alt="" />
-					</div>					
+					</a>					
 				</div>
 			</div>
 		</div>
@@ -317,7 +341,7 @@
 		<div class="c-block clear" id="kontakt">
 			<i class="c-number c-number--05 icon-05"></i>
 
-			<div class="c-pendant c-pendant--border">
+			<div class="c-pendant c-pendant--border c-pendant--border-short">
 				<div class="c-copyrights">
 					<i class="icon-logo--simple"></i>
 					<span class="c-copyrights__lead">Copyright © 2010-2016 GeoDrill</span>
@@ -325,16 +349,16 @@
 			</div>
 			
 			<div class="o-content">
-				<div class="o-header o-header--serif u-buffer o-header--content">
+				<div class="o-header o-header--serif o-header--content u-buffer">
 					<h2>Kontakt</h2>
 					
-					<i class="c-bullet c-bullet--middle3 icon-bullet"></i>
+					<i class="c-bullet c-bullet--middle icon-bullet"></i>
 				</div>
 			</div>
 			
 			<div class="o-content">
 				<div class="o-content__article">
-					<div class="o-header">
+					<div class="o-header  u-buffer--half">
 						<h4>GeoDrill - Zakład Usług Wiertniczych</h4>
 					</div>
 					

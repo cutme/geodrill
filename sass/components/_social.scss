@@ -1,13 +1,32 @@
 .c-social {
 	position: absolute;
 	right: 53px; top: 130px;
-	z-index: 5;
+	z-index: 10;
 	
 	a {
 		font-size: 22px;
 		
 		&:hover {
-			color: $red;
+			color: $red;			
+		}
+		
+		
+	}
+	
+	&.is-white {
+	
+		a {
+			&:hover {
+				color: black;
+			}
+		}
+		
+		li {
+			&:first-child {
+				&:after {
+					background-color: white;
+				}
+			}
 		}
 	}
 	
@@ -30,11 +49,44 @@
 		}
 	}
 	
+	.c-nav & {
+		display: block;
+		position: relative;
+		right: auto; top: 40px;
+		
+		li {
+			display: inline-block;
+			margin: 0 25px;
+			
+			&:first-child {
+				&:after {
+					left: 42px; top: 12px;
+					width: 20px; height: 1px;
+					background-color: white;
+				}
+			}
+			
+			a {
+				&:hover {
+					color: black;
+				}
+			}
+		}
+		
+		a {
+			font-size: 26px;
+		}
+	}
+	
 	@media screen and ( max-width: $tablet+px ) {
 		right: 30px;
 	}
 	
 	@media screen and ( max-width: $tablet_portrait+px ) {
 		display: none;
+		
+		.c-nav & {
+			display: block;
+		}
 	}
 }
