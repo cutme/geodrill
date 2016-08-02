@@ -83,7 +83,7 @@ jQuery(function($) {
 				moveToNav();
 			}
 			
-			$.ajax('http://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + lat + '&lon=' + lon + '&appid=' + API_ID)
+			$.ajax('https://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + lat + '&lon=' + lon + '&appid=' + API_ID)
 				.done(function (resp) {
 					$('.c-weather__icon--black')
 						.attr('src', 'img/weather/' + resp.weather[0].icon + '.png')
