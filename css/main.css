@@ -358,9 +358,7 @@ u {
         height: 105px;
         background-color: #cf2528;
         display: block;
-        content: ' '; }
-      #kontakt .c-block .o-header--content {
-        margin-bottom: 0 !important; } }
+        content: ' '; } }
   @media screen and (max-width: 640px) {
     .c-block .o-header--content {
       padding-left: 30px; } }
@@ -578,6 +576,9 @@ u {
   .c-contact dd {
     border-left: 1px solid black;
     padding-left: 30px; }
+  @media screen and (max-width: 375px) {
+    .c-contact dt, .c-contact dd {
+      font-size: 0.8em; } }
 
 .c-copyrights__lead {
   text-transform: uppercase;
@@ -1009,7 +1010,8 @@ u {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  margin-left: -30px !important; }
   .c-preloader__item {
     position: absolute;
     top: 50%;
@@ -1045,6 +1047,9 @@ u {
     top: -15px;
     font-size: 6.26667em;
     color: #cf2528; }
+  @media screen and (max-width: 375px) {
+    .c-signature {
+      font-size: 0.8em; } }
 
 .c-social {
   position: absolute;

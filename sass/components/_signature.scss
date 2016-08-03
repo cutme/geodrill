@@ -8,5 +8,11 @@
 		right: 0; top: -15px;
 		font-size: em(94);
 		color: $red;
+		
+		
+	}
+	
+	@media screen and ( max-width: 375px ) {
+		font-size: em(12);
 	}
 }
