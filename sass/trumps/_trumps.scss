@@ -37,10 +37,6 @@
 	@include scut-center-transform(y);
 }
 
-.u-rotate90 {
-	@include transform(rotate(90deg));
-}
-
 .u-fs--20 {
 	font-size: em(20);
 }
@@ -75,14 +71,15 @@
 		display: block !important;
 	}
 }
-/*
 
 @media screen and ( max-width: $tablet_portrait+px ) {
-	#galeria {
-		margin-bottom: 0;
+	#o-firmie {
+		.u-buffer {
+			margin-bottom: 50px;
+		}
 	}
 }
-*/
+
 
 
 .no-scroll {

@@ -66,13 +66,14 @@
 	
 	@media screen and ( max-width: $tablet+px ) {
 		padding: 0;
-		
-		//&:not(&--link) {
-			width: 105px !important;
-		//}
 	}
-	
+
 	@media screen and ( min-width: $tablet_portrait+1+px ) and ( max-width: $tablet+px ) {
+	
+		&:not(.c-pendant--link) {
+			width: 105px !important;
+		}
+
 		> .c-pendant__lead, h6 {
 			display: none;
 		}	
@@ -88,15 +89,17 @@
 				display: none;
 			}
 		}
-		
-		&--twolines {
-			top: 190px;
-		}
 
 		&--link {
 			position: relative;
 			top: auto;
 			margin-bottom: 200px;
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		&--aftertwolines {
+			top: 130px;
 		}
 	}
 }

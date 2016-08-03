@@ -1,5 +1,11 @@
 .o-header {
 	position: relative;
+	
+	@media screen and ( min-width: 481px ) and ( max-width: $tablet+px ) {
+		br {
+			display: none
+		}
+	}
 
 	&--serif {
 		font-family: $abril;
@@ -8,7 +14,7 @@
 	.c-block & {
 		
 	}
-	
+
 	.c-intro & {
 		@include transform(rotate(-90deg));
 		@include transform-origin(right, bottom);
@@ -29,7 +35,7 @@
 			display: block;
 			width: 344px; height: 101px;
 			background: {
-				image: url(../img/zobowiazuje.svg);
+				image: url(../img/svg/zobowiazuje.svg);
 				repeat: no-repeat;
 			}
 			overflow: hidden;
@@ -68,11 +74,7 @@
 			}
 		}
 	}
-	
-	//&.u-buffer {
-		//margin-bottom: 100px;
-	//}
-	
+
 	@media screen and ( max-width: $tablet_portrait+px ) {
 		&--content {
 			.c-block & {
@@ -88,6 +90,20 @@
 					display: block;
 					content: ' ';
 				}
+				
+				#kontakt & {
+					margin-bottom: 0 !important;
+				}
+			}
+		}
+		
+		
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		&--content {
+			.c-block & {
+				padding-left: 30px;				
 			}
 		}
 	}

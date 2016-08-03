@@ -1,6 +1,6 @@
 .c-block {
 	position: relative;
-	margin-bottom: 300px;
+	margin-bottom: 200px;
 
 	ul {
 		position: relative;
@@ -14,5 +14,9 @@
 	li {
 		position: relative;
 		margin-bottom: 2em;
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		margin-bottom: 150px;
 	}
 }

@@ -9,4 +9,10 @@
 	@media screen and ( max-width: $smartphone+px ) {
 		padding: 470px 0 250px 0;
 	}
+	
+	@media screen and ( max-width: $smartphone_small+px ) {
+		padding: 470px 0 150px 0;
+	}
+	
+	
 }

@@ -30,4 +30,15 @@
 			}
 		}
 	}
+	
+		
+	@media screen and ( max-width: $smartphone_small+px ) {
+		top: -220px;
+		font-size: em(265);
+		
+		&--01 {
+			top: -40px;
+			font-size: em(290);
+		}
+	}
 }

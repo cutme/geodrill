@@ -22,8 +22,12 @@ h2, h3 {
 h2 {
 	font-size: em(72);
 	
-	@media screen and ( max-width: $smartphone+px ) {
+	@media screen and ( max-width: $tablet_portrait+px ) {
 		font-size: em(52);
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		font-size: em(46);
 	}
 }
 
@@ -31,6 +35,10 @@ h3 {
 	font: {
 		size: em(35);
 		weight: $bold;
+	}
+	
+	@media screen and ( max-width: $smartphone+px ) {
+		font-size: em(28);
 	}
 }
 

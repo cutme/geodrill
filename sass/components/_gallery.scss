@@ -4,49 +4,45 @@
 	&__item {
 		@include box-shadow( rgba(black, .2) 0 0 25px );
 		z-index: 5;
+		display: block;
 		border: 10px solid white;
 
 		img {
 			display: block;
 		}
 	}
-
+	
 	@media screen and ( min-width: $tablet_portrait+1+px ) {	
 		&__item {
 			position: absolute;
-		}
+			
+			&--01 {
+				top: 0;
+				right: grid(100, 1050);
+			}
 
-		&.inactive {
-			.c-gallery__item {
-				&--01 {
-					top: 0;
-					right: grid(100, 1050);
-				}
-	
-				&--02 {
-					top: 340px;
-					right: grid(180, 1050);
-				}
-	
-				&--03 {
-					top: 500px;
-					right: grid(700, 1050);
-				}
-	
-				&--04 {
-					top: 115px;
-					right: grid(500, 1050);
-					z-index: 10;
-				}
-	
-				&--05 {
-					top: 310px;
-					right: grid(760, 1050);
-					z-index: 15;
-				}
+			&--02 {
+				top: 340px;
+				right: grid(180, 1050);
+			}
+
+			&--03 {
+				top: 500px;
+				right: grid(700, 1050);
+			}
+
+			&--04 {
+				top: 115px;
+				z-index: 10;
+				right: grid(500, 1050);
+			}
+
+			&--05 {
+				top: 310px;
+				z-index: 15;
+				right: grid(760, 1050);
 			}
 		}
-		
 		
 		&.active {
 			.c-gallery__item {	
@@ -70,31 +66,56 @@
 			}
 		}
 	}
-/*
-	@media screen and ( min-width: $smartphone+1+px ) and ( max-width: $tablet_portrait+px ) {
 	
+	@media screen and ( max-width: $tablet+px ) {
+
 		&__item {
-			&--01,
-			&--02 {
+			&--01 {
 				right: 0;
 			}
-			
+
+			&--02 {
+				right: grid(80, $tablet);
+			}
+
 			&--03 {
 				top: 500px;
-				right: grid(320, $tablet_portrait);
+				right: grid(700, $tablet);
 			}
-			
+
 			&--04 {
-				right: grid(240, $tablet_portrait);
+				right: grid(400, $tablet);
+				z-index: 10;
 			}
-			
+
 			&--05 {
-				right: auto;
-				left: 0;
+				top: 310px;
+				right: grid(760, $tablet);
+				z-index: 15;
 			}
 		}
+		
+		&.active {
+			.c-gallery__item {	
+				&--01 {
+					right: grid(30, $tablet);
+				}
+	
+				&--02 {
+					right: grid(120, $tablet);
+				}
+	
+				&--03 {
+					right: grid(490, $tablet);
+				}
+
+				&--05 {
+					right: grid(530, $tablet);
+				}
+			}
+		}		
+		
 	}
-	*/
 	
 	@media screen and ( max-width: $tablet_portrait+px ) {
 		width: calc(100% + 30px) !important;
@@ -102,7 +123,7 @@
 		padding-top: 60px;
 
 		&__item {
-			margin: 0 10px;
+			margin: 20px 10px;
 		}
 	}
 }

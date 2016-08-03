@@ -38,11 +38,11 @@
 		margin-left: 10px;
 	}
 	
-	@media screen and ( min-width: $smartphone+1+px ) {
+	@media screen and ( min-width: $tablet_portrait+1+px ) {
 		position: relative;
 	}
 	
-	@media screen and ( max-width: $smartphone+px ) {
+	@media screen and ( max-width: $tablet_portrait+px ) {
 		.c-block & {
 			margin-left: 0;
 		}
