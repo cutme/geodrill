@@ -88,7 +88,9 @@
 	}
 	
 	#kontakt {
-		margin-bottom: 250px;
+		.mobile & {
+			margin-bottom: 250px;
+		}
 	}
 }
 

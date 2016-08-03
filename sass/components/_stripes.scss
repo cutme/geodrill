@@ -23,6 +23,10 @@
 
 	&--two {
 		top: 4400px;
-		height: 3578px;
+		height: 3478px;
+		
+		.mobile & {
+			height: 3578px;
+		}
 	}
 }

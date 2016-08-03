@@ -1125,7 +1125,9 @@ u {
     height: 3478px; }
   .c-stripes--two {
     top: 4400px;
-    height: 3578px; }
+    height: 3478px; }
+    .mobile .c-stripes--two {
+      height: 3578px; }
 
 .c-topbar {
   position: fixed;
@@ -1277,7 +1279,7 @@ u {
   #galeria,
   #kontakt .o-header {
     margin-bottom: 50px !important; }
-  #kontakt {
+  .mobile #kontakt {
     margin-bottom: 250px; } }
 
 .no-scroll {
