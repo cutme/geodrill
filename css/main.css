@@ -807,7 +807,8 @@ u {
         margin-right: auto;
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
+        transform: translate(-50%, -50%);
+        padding-top: 60px; }
       .c-nav__link {
         font-size: 1.2em; }
         .c-nav__link:hover {
@@ -1027,6 +1028,11 @@ u {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    -webkit-transform-origin: 48% 56%;
+    -moz-transform-origin: 48% 56%;
+    -ms-transform-origin: 48% 56%;
+    -o-transform-origin: 48% 56%;
+    transform-origin: 48% 56%;
     width: 60px;
     height: 60px;
     background-image: url(../img/svg/logo--simple.svg);
@@ -1081,7 +1087,7 @@ u {
     display: block;
     position: relative;
     right: auto;
-    top: 40px; }
+    top: 20px; }
     .c-nav .c-social li {
       display: inline-block;
       margin: 0 25px; }
@@ -1125,7 +1131,7 @@ u {
     height: 3478px; }
   .c-stripes--two {
     top: 4400px;
-    height: 2478px; }
+    height: 2428px; }
     .mobile .c-stripes--two {
       height: 3578px; }
 
@@ -1159,7 +1165,7 @@ u {
   -moz-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
   .c-weather li {
     display: inline-block;
     vertical-align: middle;
@@ -1178,7 +1184,7 @@ u {
     .c-weather {
       position: absolute;
       right: 40px;
-      top: 50px;
+      top: 40px;
       z-index: 5; } }
   @media screen and (max-width: 768px) {
     .c-weather {
@@ -1264,6 +1270,9 @@ u {
 .safari * {
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d; }
+
+.desktop #kontakt {
+  margin-bottom: 150px; }
 
 @media screen and (min-width: 769px) {
   #galeria {

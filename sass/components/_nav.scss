@@ -46,8 +46,8 @@
 		
 		&__content {
 			@include scut-center-transform;
+			padding-top: 60px;
 		}
-		
 		
 		&__link {
 			font-size: em(18);
