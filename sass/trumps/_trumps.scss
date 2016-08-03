@@ -80,6 +80,17 @@
 	}
 }
 
+@media screen and ( max-width: $smartphone_small+px ) {
+
+	#galeria,
+	#kontakt .o-header {
+		margin-bottom: 50px !important;
+	}
+	
+	#kontakt {
+		margin-bottom: 250px;
+	}
+}
 
 
 .no-scroll {

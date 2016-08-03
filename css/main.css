@@ -1272,5 +1272,12 @@ u {
   #o-firmie .u-buffer {
     margin-bottom: 50px; } }
 
+@media screen and (max-width: 480px) {
+  #galeria,
+  #kontakt .o-header {
+    margin-bottom: 50px !important; }
+  #kontakt {
+    margin-bottom: 250px; } }
+
 .no-scroll {
   overflow: hidden; }
