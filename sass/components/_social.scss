@@ -1,16 +1,14 @@
 .c-social {
 	position: absolute;
-	right: 53px; top: 130px;
+	right: 42px; top: 130px;
 	z-index: 10;
 	
 	a {
 		font-size: 22px;
 		
 		&:hover {
-			color: $red;			
+			color: $blue;			
 		}
-		
-		
 	}
 	
 	&.is-white {
@@ -77,11 +75,7 @@
 			font-size: 26px;
 		}
 	}
-	
-	@media screen and ( max-width: $tablet+px ) {
-		right: 30px;
-	}
-	
+
 	@media screen and ( max-width: $tablet_portrait+px ) {
 		display: none;
 		

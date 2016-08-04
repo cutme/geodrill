@@ -1055,13 +1055,13 @@ u {
 
 .c-social {
   position: absolute;
-  right: 53px;
+  right: 42px;
   top: 130px;
   z-index: 10; }
   .c-social a {
     font-size: 22px; }
     .c-social a:hover {
-      color: #cf2528; }
+      color: #7dcfd7; }
   .c-social.is-white a:hover {
     color: black; }
   .c-social.is-white li:first-child:after {
@@ -1097,9 +1097,6 @@ u {
         color: black; }
     .c-nav .c-social a {
       font-size: 26px; }
-  @media screen and (max-width: 1024px) {
-    .c-social {
-      right: 30px; } }
   @media screen and (max-width: 768px) {
     .c-social {
       display: none; }
@@ -1164,8 +1161,10 @@ u {
   margin-bottom: 20px; }
   .c-weather li {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     font-family: "Oswald", sans-serif; }
+    .c-weather li:first-child, .c-weather li:last-child {
+      padding-top: 12px; }
     .c-weather li:nth-child(2) {
       padding: 0 15px; }
   .c-weather__icon {
@@ -1180,7 +1179,7 @@ u {
     .c-weather {
       position: absolute;
       right: 40px;
-      top: 40px;
+      top: 42px;
       z-index: 5; } }
   @media screen and (max-width: 768px) {
     .c-weather {

@@ -4,8 +4,13 @@
 	
 	li {
 		display: inline-block;
-		vertical-align: middle;
+		vertical-align: top;
 		font-family: $oswald;
+		
+		&:first-child,
+		&:last-child {
+			padding-top: 12px;
+		}
 		
 		&:nth-child(2) {
 			padding: 0 15px;
@@ -34,7 +39,7 @@
 	
 	@media screen and ( min-width: $smartphone+1+px ) {
 		position: absolute;
-		right: 40px; top: 40px;
+		right: 40px; top: 42px;
 		z-index: 5;
 	}
 	
