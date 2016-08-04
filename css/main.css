@@ -138,6 +138,22 @@ strong {
 u {
   text-decoration: underline; }
 
+::-webkit-selection {
+  color: white;
+  background: #7dcfd7; }
+
+::-moz-selection {
+  color: white;
+  background: #7dcfd7; }
+
+::-o-selection {
+  color: white;
+  background: #7dcfd7; }
+
+::selection {
+  color: white;
+  background: #7dcfd7; }
+
 .o-container {
   -webkit-transition-property: all;
   -moz-transition-property: all;

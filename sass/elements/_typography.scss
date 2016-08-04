@@ -73,3 +73,6 @@ strong {
 u {
 	text-decoration: underline;
 }
+
+
+@include selection(white, $blue);
