@@ -33,6 +33,10 @@
 	}
 }
 
+.u-color--blue {
+	color: $blue;
+}
+
 .u-posy {
 	@include scut-center-transform(y);
 }
