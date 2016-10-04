@@ -231,6 +231,8 @@ jQuery(function($) {
 				duration: "300%"
 			}
 		});
+		
+		var controllerPin = new ScrollMagic.Controller();
 /*
 		Backgrounds
 	*/
@@ -353,5 +355,22 @@ jQuery(function($) {
 			triggerElement: "#kontakt",
 			offset: 400
 		}).setClassToggle("#kontakt .c-number", "active").addTo(controller);
+		
+		
+	/*
+		Pin
+	*/
+	
+		new ScrollMagic.Scene({
+			triggerElement: "#uslugi-1",
+			duration: $('#uslugi-1').height() + 200,
+			offset: 100
+		}).setPin('#addServices').addTo(controllerPin);
+		
 	});
+	
+	
+	
+		
+	
 });
