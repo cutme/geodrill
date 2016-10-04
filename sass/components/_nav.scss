@@ -30,6 +30,7 @@
 
 	@media screen and ( max-width: $tablet+px ) {
 		@include anim;
+		@include transition-duration(300ms);
 		//@include opacity(0);	
 		position: fixed;
 		bottom: -100%;
