@@ -194,6 +194,7 @@ jQuery(function($) {
 
 			function init() {
 				if (window_smaller_than(769)) {
+					
 					if (status === false) {
 						setTimeout(function() {
 							startOwl();

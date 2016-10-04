@@ -110,8 +110,18 @@
 	overflow: hidden;
 }
 
+#cennik .o-content {
+	overflow: hidden;
+}
+
 #uslugi-2 .c-pendant {
 	.no-mobile & {
 		display: none;
+	}
+}
+
+#kontakt.c-block {
+	@media screen and ( max-width: 480px ) {
+		margin-bottom: 50px;
 	}
 }
