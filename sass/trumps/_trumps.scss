@@ -109,3 +109,9 @@
 .no-scroll {
 	overflow: hidden;
 }
+
+#uslugi-2 .c-pendant {
+	.no-mobile & {
+		display: none;
+	}
+}

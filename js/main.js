@@ -357,16 +357,17 @@ jQuery(function($) {
 		}).setClassToggle("#kontakt .c-number", "active").addTo(controller);
 		
 		
-	/*
-		Pin
-	*/
-	
-		new ScrollMagic.Scene({
-			triggerElement: "#uslugi-1",
-			duration: $('#uslugi-1').height() + 200,
-			offset: 100
-		}).setPin('#addServices').addTo(controllerPin);
+		/*
+			Pin
+		*/
 		
+		if ($('.no-mobile').length>0) {
+			new ScrollMagic.Scene({
+				triggerElement: "#uslugi-1",
+				duration: $('#uslugi-1').height() + 200,
+				offset: 100
+			}).setPin('#addServices').addTo(controllerPin);
+		}
 	});
 	
 	
