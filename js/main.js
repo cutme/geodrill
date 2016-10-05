@@ -366,7 +366,7 @@ jQuery(function($) {
 			new ScrollMagic.Scene({
 				triggerElement: "#uslugi-1",
 				duration: $('#uslugi-1').height() + 200,
-				offset: 100
+				offset: 300
 			}).setPin('#addServices').addTo(controllerPin);
 		}
 	});
