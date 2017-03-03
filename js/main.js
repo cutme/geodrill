@@ -17,14 +17,12 @@ jQuery(function($) {
 		var d = ($(o).length > 0) ? true : false;
 		return d;
 	}
-
+	
 	function goToTarget(target) {
-		var v = $('html, body'),
-			o = $(target).offset().top - 140;
-		v.animate({
-			scrollTop: o
+		$('html, body').animate({
+			scrollTop: $(target).offset().top - 120
 		}, {
-			duration: 500,
+			duration: 1500,
 			easing: 'easeOutCubic'
 		});
 	}
@@ -104,22 +102,27 @@ jQuery(function($) {
 				status = false,
 				w = $('.c-weather'),
 				ww = $(window).width();
+
 			item.on('click', function(e) {
-				target = $(this).attr('href');
-				b.removeClass('no-scroll');
-				logo.removeClass('is-white');
-				social.removeClass('is-white');
-				w.removeClass('is-white');
-				if (trigger.hasClass('is-active')) {
-					nav.removeClass('is-active');
-					trigger.removeClass('is-active');
-					setTimeout(function() {
+
+				if ($('html').hasClass('mobile')) {
+					target = $(this).attr('href');
+					b.removeClass('no-scroll');
+					logo.removeClass('is-white');
+					social.removeClass('is-white');
+					w.removeClass('is-white');
+					if (trigger.hasClass('is-active')) {
+						nav.removeClass('is-active');
+						trigger.removeClass('is-active');
+						setTimeout(function() {
+							goToTarget(target);
+						}, 400);
+					} else {
 						goToTarget(target);
-					}, 400);
-				} else {
-					goToTarget(target);
+					}
 				}
 			});
+
 			trigger.on('click', function(e) {
 				e.preventDefault();
 				$(this).toggleClass('is-active');
@@ -232,6 +235,35 @@ jQuery(function($) {
 				duration: "300%"
 			}
 		});
+		
+		// change behaviour of controller to animate scroll instead of jump
+		controller.scrollTo(function (newpos) {
+			TweenLite.to(window, 1.5, {scrollTo: {y: newpos - 120}});
+		});
+		
+		if ($('.mobile').length > 0) {
+			controller.destroy(reset);
+			controller = null;
+		}
+		
+		$(document).on("click", "a[href^='#']", function (e) {
+			var id = $(this).attr("href"),
+				logo = $('.c-logo'),
+				social = $('.c-social'),
+				w = $('.c-weather');
+			
+			if ($(id).length > 0) {
+				e.preventDefault();
+	
+				// trigger scroll
+				controller.scrollTo(id);
+				
+				logo.removeClass('is-white');
+				social.removeClass('is-white');
+				w.removeClass('is-white');
+			}
+		});
+		
 		
 		var controllerPin = new ScrollMagic.Controller();
 /*

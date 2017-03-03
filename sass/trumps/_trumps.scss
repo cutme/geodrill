@@ -65,7 +65,7 @@
 	}
 }
 
-#kontakt {
+#kontakt .o-content__article {
 	.desktop & {
 		margin-bottom: 150px;
 	}
@@ -95,12 +95,6 @@
 	#kontakt .o-header {
 		margin-bottom: 50px !important;
 	}
-	
-	#kontakt {
-		.mobile & {
-			margin-bottom: 250px;
-		}
-	}
 }
 
 
@@ -111,7 +105,7 @@
 }
 
 #cennik .o-content {
-	overflow: hidden;
+	//overflow: hidden;
 }
 
 #uslugi-2 .c-pendant {
